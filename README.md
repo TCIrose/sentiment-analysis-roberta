@@ -20,11 +20,17 @@ The goal was to improve classification accuracy.
 ## 📁 Project Structure
 
 ├── data/
+
 ├── logs/
+
 ├── plots/
+
 ├── scripts/
+
 ├── notebooks/
+
 └── README.md
+
 └── mini-report.htm
 
 
