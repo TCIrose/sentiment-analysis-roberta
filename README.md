@@ -40,6 +40,8 @@ The goal was to improve classification accuracy.
 
 └── mini-report.htm
 
+└── requirements.txt
+
 
 ---
 
