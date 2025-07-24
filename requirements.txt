@@ -1,0 +1,21 @@
+# Core packages
+pandas>=1.5.0
+numpy>=1.23.0
+tqdm>=4.65.0
+
+# Plotting
+matplotlib>=3.7.0
+seaborn>=0.12.2
+
+# Hugging Face Transformers and Datasets
+transformers>=4.40.0
+datasets>=2.16.0
+
+# PyTorch
+torch>=2.1.0
+
+# Sklearn
+scikit-learn>=1.4.0
+
+# Statistical tests
+statsmodels>=0.14.0
