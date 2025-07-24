@@ -8,12 +8,19 @@ The goal was to improve classification accuracy.
 ## 🧠 Overview
 
 **Model:** RoBERTa-base (pretrained)
+
 **Task:** Sentiment classification (Negative, Neutral, Positive)
+
 **Dataset:** 9,999 labeled electronics product reviews
+
 **Labels:** 3 classes — Negative (0), Neutral (1), Positive (2)
+
 **Approach:**
+
   - Evaluate base model using zero-shot inference
+    
   - Fine-tune using 80% of the dataset
+    
   - Test and compare using the remaining 20%
 ---
 
