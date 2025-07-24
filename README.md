@@ -36,6 +36,8 @@ The goal was to improve classification accuracy.
 
 ├── notebooks/
 
+├── mini-report_files/
+
 └── README.md
 
 └── mini-report.htm
@@ -48,7 +50,9 @@ The goal was to improve classification accuracy.
 ## 🧪 Methodology
 
 1. **Zero-shot Evaluation**  
-   The base `roberta-base` model was first evaluated in a zero-shot manner, where predictions were made using class labels as hypotheses. Performance was particularly weak for the "Neutral" class.
+   The base `roberta-base` model was first evaluated in a zero-shot manner, where predictions were made using class labels as hypotheses. 
+   
+   Performance was particularly weak for the "Neutral" class.
    
 | Class            | Precision | Recall | F1-score | Support |
 |------------------|-----------|--------|----------|---------|
@@ -59,16 +63,15 @@ The goal was to improve classification accuracy.
 | Macro avg        | 0.84      | 0.68   | 0.59     | 9999    |
 | Weighted avg     | 0.84      | 0.68   | 0.59     | 9999    |
 
-![Base model confusion matrix](./plots/Roberta_base_model_confusion_matrix_on_whole_dataset.png)
 
-3. **Fine-Tuning**  
+2. **Fine-Tuning**  
    The model was fine-tuned on 80% of the labeled dataset. Hyperparameters:
    - Epochs: 3
    - Batch Size: 8
    - Weight Decay: 0.01
    - Learning Rate Scheduler: Warm-up steps = 500
 
-4. **Evaluation**  
+3. **Evaluation**  
    The remaining 20% was used to test both the zero-shot model and the fine-tuned model. Key metrics included precision, recall, F1-score, and accuracy.
 
 ---
@@ -86,7 +89,6 @@ The goal was to improve classification accuracy.
 | Macro avg        | 0.83      | 0.68   | 0.59     | 2000    |
 | Weighted avg     | 0.84      | 0.68   | 0.58     | 2000    |
 
-![Base model on Test data set confusion matrix](./plots/Confusion_Matrix_For_base_Roberta_Model_on_test_data.png)
 
 
 ### ✅ Fine-Tuned Model on Same Test Set
@@ -100,8 +102,6 @@ The goal was to improve classification accuracy.
 | Macro avg        | 1.00      | 1.00   | 1.00     | 2000   |
 | Weighted avg     | 1.00      | 1.00   | 1.00     | 2000    |
 
-![Fine-tuned model confusion matrix](./plots/Confusion_Matrix_For_Finetuned_Roberta_Model.png)
-
 
 ---
 
@@ -114,14 +114,6 @@ To ensure improvements were meaningful:
 
 ---
 
-## 📉 Loss Curve
-
-Training and validation loss across epochs was plotted and saved at:
-
-
-
-![Loss Curve](./plots/training_and_validation_loss_plot.png)
-
 ---
 
 ## 🔍 Observations & Notes
@@ -133,4 +125,5 @@ Training and validation loss across epochs was plotted and saved at:
   - No data leakage was found (data was split before training).
 
 ---
+📄 [View the report](https://tcirose.github.io/sentiment-analysis-roberta/mini-report.htm)
 
